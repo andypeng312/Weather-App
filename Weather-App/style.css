@@ -1,0 +1,278 @@
+body {
+	background-image: url(noisy_net/noisy_net_@2X.png);
+	font-family: 'ABeeZee', sans-serif;
+}
+
+#loading {
+	z-index: 20;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color:#444;
+}
+
+#loadericon {
+	width: 64px;
+	height: 64px;
+	background-image: url(109.gif);
+	background-position: 0 0;
+}
+
+#appBody {
+	background-color:#39F;
+	overflow: hidden;
+}
+
+#head {
+	background-color: #FFF;
+	padding: 20px;
+	overflow: hidden;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+#loc h1 {
+	font-weight: bold;
+	font-size: 36px;
+}
+
+#loc {
+	width: 100%;
+	width: 50%;
+	float:left;
+}
+
+#head h2 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 50%;
+	float: right;
+	padding-left: 10%;
+	height:100%
+}
+
+#shadow {
+	z-index: 2;
+	box-shadow: 0px 0px 10px 3px #222 inset;
+	padding: 20px;
+	pointer-events: none;
+}
+
+#appBody, #shadow {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	left: 10%;
+	top: 10%;
+	border-radius: 20px;
+	min-width: 800px;
+	min-height: 550px;
+}
+
+#appBody * {
+	pointer-events: all;
+}
+
+@keyframes boxIn {
+	0% {left: -40%;}
+	100% {left: 50%;}
+}
+
+@-moz-keyframes boxIn {
+	0% {left: -40%;}
+	100% {left: 50%;}
+}
+
+@-webkit-keyframes boxIn {
+	0% {left: -40%;}
+	100% {left: 50%;}
+}
+
+#cover {
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+}
+
+#startBox {
+	position: fixed;
+	z-index: 4;
+	top: 50%;
+	left: 50%;
+	width: 15em;
+	height: 7em;
+	margin-top: -3.5em;
+	margin-left: -7.5em;
+	background-color: rgba(20,20,20,0.5);
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px 0 #000;
+	animation: boxIn 2s;
+	-moz-animation: boxIn 2s;
+	-webkit-animation: boxIn 2s;
+	display:none;
+}
+
+#startBox * {
+	display:block;
+	clear:both;
+	margin-top:10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#startBox .error {
+	font-size: 11px;
+	color: rgba(171,42,54,1);
+	margin-top: 0px;
+	display: none;
+}
+
+#head h2 img {
+	float: left;
+	margin-right: 10px;
+}
+
+.important {
+	font-weight: bold;
+}
+
+.warning, .warningClicked {
+	padding: 10px;
+	clear:both;
+	background-color: rgba(204,204,204,1);
+	transition: height 1s;
+	-moz-transition: height 1s;
+	-webkit-transition: height 1s;
+	overflow:hidden;
+}
+
+.warning {
+	height: 30px;
+}
+
+.warningClicked{
+	height: 130px;
+}
+
+a {
+	color: rgba(0,46,255,1);
+	font-size:10px;
+}
+
+.buttons {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position:absolute;
+	bottom: 10px;
+	margin: 5px;
+	width: 30%;
+	box-shadow: 2px 2px 2px 2px rgba(51,51,51,0.3);
+	text-align:center;
+}
+
+.buttons:active{
+	bottom: 9px;
+	box-shadow: 2px 2px 1px 1px rgba(51,51,51,0.3)
+}
+
+#Today {
+	left: 10px;
+	background-color:rgb(0,204,153);
+}
+
+#Hourly {
+	left: 33%;
+	background-color:rgb(0,51,255);
+}
+
+#Week {
+	left:66%;
+	background-color:rgb(102,51,255);
+}
+
+.TodayPane {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position:absolute;
+	width:33%;
+	padding: 20px;
+}
+
+#Current {
+	left: 0;
+}
+
+#TodayWeather {
+	left: 33%;
+}
+
+#Tonight {
+	left: 66%;
+}
+
+h3 {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-weight:bold;
+}
+
+.todayButton .icon, .week .icon {
+	float:left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.todayButton .icon p, .week .icon p {
+	width: 75%;
+	float:right;
+	font-size:12px;
+}
+
+.warningClicked .content, warning .content {
+	transition: height 1s;
+	-moz-transition: height 1s;
+	-webkit-transition: height 1s;
+	overflow:scroll;
+	background-color: #FFFFFF;
+}
+
+.warning .content {
+	overflow:hidden;
+	height: 0;
+}
+
+.warningClicked .content {
+	height: 100px;
+}
+
+table {
+	color:rgb(255,255,255);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h4, h5 {
+	color:rgb(255,255,255);
+	display: block;
+	clear:both;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h4 {
+	font-weight:bold;
+	float:left;
+}
+
+h5 {
+	margin-bottom: 12px;
+}

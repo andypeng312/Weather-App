@@ -1,0 +1,20 @@
+This is a weather app that uses the browser's geolocation data and uses the
+Weather Underground API at http://api.wunderground.com/ to return weather data
+at the user's location.
+
+This app was made so that I could practice the following skills and techniques:
+-jQuery
+-AJAX requests
+-using JSONP for CORS
+-using a CSS reset
+-CSS keyframe animations
+-DOM manipulation
+
+The app uses the Meyer's CSS Reset Stylesheet found at 
+http://meyerweb.com/eric/tools/css/reset/ and a background pattern downloaded
+from www.subtlepatterns.com.
+
+The screenshot folder shows images of the final product.
+
+Technologies used: HTML, jQuery, CSS, AJAX/JSONP
+Estimated Lines of Code: 600

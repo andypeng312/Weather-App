@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<title>Awesome Weather App!</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="JQuery.js" type="text/javascript"></script>
+    <script src="weather.js" type="text/javascript"></script>
+</head>
+
+<body onload="onload();">
+	<div id="loading">
+    	<div id="loadericon">
+        </div>
+        <div>Loading...</div>
+    </div>
+    <div id="cover">
+	<div id="startBox">
+        <form name="weatherlocation" onSubmit="return false">
+            <label for="location">Where are you?</label>
+            <input type="text" name="location" class="text" />
+            <div id="error1" class="error">Please enter a valid location</div>
+            <div id="error2" class="error">Please be more specific</div>
+            <input type="button" value="Check the Weather!" class="button" onClick="submitData();"/>
+        </form>
+    </div>
+    </div>
+    <div id="shadow">
+    </div>
+	<div id="appBody">
+        <div id="head">
+            <div id="loc"><h1 id="location">Weather for ...</h1><br><a onClick="changeLoc();">Change your location</a></div>
+            <h2 id="quickstats"><div class="icon"></div><p></p></h2>
+        </div>
+        
+        <div class="pane todayButton">
+        <div class="TodayPane" id="Current"><h3>Current</h3>
+        <div class="icon"></div>
+        <table>
+        </table>
+        </div>
+        <div class="TodayPane" id="TodayWeather"><h3>Today</h3>
+        <div class="icon"></div>
+        <table>
+        </table>
+        </div>
+        <div class="TodayPane" id="Tonight"><h3>Tonight</h3>
+        <div class="icon"></div>
+        <table>
+        </table>
+        </div>
+        </div>
+        
+        <div class="pane hour">
+        </div>
+        
+        <div class="pane week">
+        </div>
+        
+        <div class="buttons" id="Today">Today</div>
+        <div class="buttons" id="Hourly">Hourly</div>
+        <div class="buttons" id="Week">Week</div>
+	</div>
+</body>
+</html>
